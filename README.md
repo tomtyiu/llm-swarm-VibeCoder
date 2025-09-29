@@ -53,7 +53,7 @@ with LLMSwarm(
     )
 ) as llm_swarm:
     client = AsyncInferenceClient(model=llm_swarm.endpoint)
-    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
+    tokenizer = AutoTokenizer.from_pretrained("EpistemeAI/VibeCoder-20B-alpha-0.001")
     tokenizer.add_special_tokens({"sep_token": "", "cls_token": "", "mask_token": "", "pad_token": "[PAD]"})
 
     async def process_text(task):
